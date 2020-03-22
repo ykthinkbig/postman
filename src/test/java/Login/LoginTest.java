@@ -13,14 +13,16 @@ public class LoginTest {
         System.setProperty("webdriver.chrome.driver", "resources/chromedriver.exe");
         driver = new ChromeDriver();
         driver.get("https://www.postman.com/");
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         driver.manage().window().maximize();
         System.out.println(driver.getTitle());
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.linkText("Sign In")).click();
-        driver.findElement(By.name("username")).sendKeys("jideluvs@gmail.com");
-        driver.findElement(By.id("password")).sendKeys("L0rlah10.");
+        driver.findElement(By.name("username")).sendKeys("xxxxxxx);
+        driver.findElement(By.id("password")).sendKeys("xxxxxx");
         driver.findElement(By.xpath("//button[@id='sign-in-btn']")).click();
+        Thread.sleep(10000);
+        driver.quit();
     }
 
     public static void main(String args[]) throws InterruptedException {
